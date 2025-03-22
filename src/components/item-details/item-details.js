@@ -13,13 +13,11 @@ const Record = ({item, field, label}) => {
     )
 }
 
-export {
-    Record
-}
+export {Record};
 
 export default class ItemDetails extends Component {
 
-    swapiService = new SwapiService()
+    swapiService = new SwapiService();
 
     state = {
         item: null,
@@ -45,18 +43,16 @@ export default class ItemDetails extends Component {
             return;
         }
 
-        getData(itemId)
-            .then((item) => {
-                this.setState({
-                    item,
-                    image: getImageUrl(item),
-                    loading: false
-                })
+        getData(itemId).then((item) => {
+            this.setState({
+                item,
+                image: getImageUrl(item),
+                loading: false
             })
+        })
     }
 
     render() {
-
         if (!this.state.item)
             return <span>Select a person from a list</span>
 
@@ -81,9 +77,7 @@ const ItemDetailsView = ({item, image, context}) => {
 
     return (
         <React.Fragment>
-            <img className="person-image" alt="person image"
-                 src={image}/>
-
+            <img className="person-image" alt="person image" src={image}/>
             <div className="card-body">
                 <h4>{name}</h4>
                 <ul className="list-group list-group-flush">
