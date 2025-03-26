@@ -1,7 +1,6 @@
 import React from 'react'
 
 import './not-found-indicator.css'
-import icon from './death-star.png'
 
 const NotFoundIndicator = () => {
     return (
